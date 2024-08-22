@@ -81,7 +81,6 @@
   .nav-links a {
     color: #fff;
     text-decoration: none;
-    padding: 2px;
     position: relative;
     display: inline-block;
     transition: color 0.3s ease, background-color 0.3s ease;
