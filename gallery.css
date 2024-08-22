@@ -1,0 +1,80 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: system-ui, sans-serif;
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #fff;
+    background-color: #07071d;
+    padding: 3rem 6rem;
+  }
+  
+  main {
+    max-width: 1000px;
+    margin-inline: auto;
+    text-align: center;
+  }
+  
+  h1 {
+    font-size: 2rem;
+    font-weight: 600;
+  }
+  
+  h2 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-block-end: 4rem;
+  }
+  
+  img {
+    max-width: 100%;
+  }
+  
+  .gallery {
+    display: flex;
+    justify-content: center;
+    gap: 0.25rem;
+    transform-style: preserve-3d;
+    pointer-events: none;
+  }
+  
+  .gallery-panel {
+    flex: 1;
+    aspect-ratio: 1 / 1.5;
+    cursor: pointer;
+    transition: 0.4s;
+    pointer-events: auto;
+  
+    /* Not 100% compatible with all browsers */
+    -webkit-box-reflect: below 4px
+      linear-gradient(transparent, rgba(0, 0, 0, 0.15));
+  
+    /* background-color: red; */
+  }
+  
+  .gallery-panel img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 1 / 1.5;
+    object-fit: cover;
+    border-radius: 4px;
+  }
+  
+  .gallery-panel:hover {
+    transform: scale(1.2);
+    box-shadow: 0 0 25px 5px rgba(0, 0, 0, 0.5);
+  }
+  
+  .gallery:hover > :not(:hover) {
+    margin-inline: -1.5rem;
+    transform: perspective(400px) rotateY(30deg) scale(0.8);
+  }
+  
+  .gallery-panel:hover ~ .gallery-panel {
+    transform: perspective(400px) rotateY(-30deg) scale(0.8);
+  }
+  

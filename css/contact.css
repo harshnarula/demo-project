@@ -1,0 +1,227 @@
+.container-contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 100vh; /* This ensures the container takes the full height of the viewport */
+    overflow: hidden; /* This hides any overflow from the image */
+    margin: 0px;
+  }
+
+  .main-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 1280px;
+    position: relative;
+    z-index: 1; /* Ensures the main-div is above the image */
+    animation: fadeIn 2s ease-in-out;
+  }
+  
+  .contact-img-left {
+    display: flex;
+    max-width: 100%;
+    width: auto;
+    height: auto;
+    position: absolute;
+    left: 0%;
+    top: 25%;
+    transform: translateY(-50%);
+    z-index: 0; 
+    animation: slideDown 2s ease-in-out;
+  }
+
+  .contact-img {
+    display: flex;
+    max-width: 100%;
+    width: auto;
+    height: auto;
+    position: absolute;
+    right: 0;
+    top: 80%;
+    transform: translateY(-50%);
+    z-index: 0; /* Ensures the image is behind the main-div */
+    animation: slideUp 2s ease-in-out;
+  }
+
+
+.section-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+}
+
+.contact-title {
+    text-align: center;
+    color: #18bbb3cf;
+    margin: 20px;
+}
+
+.form-div {
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    max-width: 700px;
+    min-height: 300px;
+}
+
+.param-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+#contact-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+}
+
+.form-label {
+    margin-bottom: 0.5rem;
+    color: #18bbb3cf;
+}
+
+
+.form-input,
+.form-textarea {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    border: 1px solid #18bbb3cf;
+    color: #18bbb3cf;
+    border-radius: 8px;
+    text-indent: 2px;
+    width: 400px;
+    height: 40px;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+}
+
+.form-input::placeholder,
+.form-textarea::placeholder {
+    color: #18bbb3cf;
+}
+
+.form-input.active::placeholder,
+.form-textarea.active::placeholder {
+    color: #fff;
+}
+
+.form-input.active,
+.form-textarea.active {
+    background-color: #18bbb3cf;
+    color: #fff;
+    border-color: #fff;
+}
+
+.form-button {
+    padding: 0.5rem;
+    border-color: #18bbb3cf;
+    color: #18bbb3cf;
+    border: 1px solid #18bbb3cf;
+    cursor: pointer;
+    border-radius: 8px;
+    margin-top: 1rem;
+    width: 100px;
+    transition: 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.form-button:hover {
+    background: #18bbb3cf;
+    color: #fff;
+}
+
+.error {
+    width: 300px;
+    height: 40px;
+    background-color: #18bbb3;
+    color: white;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 20px;
+    right: 0px;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-200%);
+    }
+    to {
+        transform: translateY(-50%);
+    }
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(200%);
+    }
+    to {
+        transform: translateY(-50%);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUpMobile {
+    from {
+        transform: translateY(100%) translateX(-50%);
+    }
+    to {
+        transform: translateY(0) translateX(-50%);
+    }
+}
+
+
+@media (max-width: 960px) {
+    .form-input,
+    .form-textarea {
+        margin-bottom: 1rem;
+        padding: 0.5rem;
+        border: 1px solid #18bbb3cf;
+        color: #18bbb3cf;
+        border-radius: 8px;
+        text-indent: 2px;
+        width: 180px;
+        height: 35px;
+    }
+
+    .contact-title{
+        margin: 10px;
+    }
+
+    .contact-img-left{
+        display: none;
+    }
+
+    .contact-img {
+        justify-content: center;
+        position: absolute;
+        bottom: 0;
+        top: auto;
+        left: 50%;
+        transform: translateX(-50%);
+        animation: slideUpMobile 2s ease-in-out;
+      }
+
+    .error {
+        width: 240px;
+    }
+}

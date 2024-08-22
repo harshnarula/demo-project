@@ -1,0 +1,145 @@
+/*.footer-div {
+  
+    height:130px;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    background: #2c5188;
+}
+*/
+
+
+.footer-main{
+    padding-top: 90px;
+   
+  
+  }
+  .copyright {
+    text-align: center; /* Align text to center */
+    padding: 1rem; /* Add padding (equivalent to 16px) */
+    background-color: rgba(0, 0, 0, 0.2); /* Semi-transparent black background */
+  }
+
+  .link-container {
+    padding: 1.5rem; /* Equivalent to Bootstrap's p-4 */
+    padding-bottom: 0; /* Equivalent to Bootstrap's pb-0 */
+  }
+  
+  .social-media {
+    margin-bottom: 1rem; /* Equivalent to Bootstrap's mb-4 */
+  }
+
+  .custom-col {
+    box-sizing: border-box;
+    padding: 0 15px; /* Add padding if needed */
+  }
+
+  /* Styles for large screens and above (≥992px) */
+  @media (min-width: 992px) {
+    .custom-col-lg-4 {
+      width: 33.3333%; /* 4/12 of 100% */
+    }
+  }
+
+  /* Styles for small screens and above (≥576px) */
+  @media (min-width: 576px) {
+    .custom-col-sm-12 {
+      width: 100%;
+    }
+  }
+
+  /* Styles for extra small screens (default behavior) */
+  .custom-col-xs-12 {
+    width: 100%;
+  }
+  
+  .social-btn {
+    display: inline-block;
+    margin: 0.25rem; /* Equivalent to Bootstrap's m-1 */
+    padding: 0.5rem 1rem; /* Optional: Adjust padding if needed */
+    border: 1px solid transparent; /* For outline effect */
+    border-radius: 50%; /* Make button circular */
+    text-align: center; /* Center text and icons */
+    font-size: 1rem; /* Adjust size as needed */
+    color: #fff; /* White text color */
+    background-color: transparent; /* Transparent background */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+  }
+  
+  .social-btn:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Example hover effect */
+  }
+  
+
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.row {
+  display: flex; /* Align children horizontally */
+  flex-wrap: wrap; /* Allow wrapping of columns on smaller screens */
+  margin-right: -15px; /* Optional: Counteract padding of child columns */
+  margin-left: -15px; /* Optional: Counteract padding of child columns */
+}
+  
+  .address-main > div.col-lg-4 {
+    border-bottom: dotted 1px #999;
+  }
+  .address-box {
+    padding: 10px 0;
+    margin-bottom: 30px;
+  }
+  .add-icon{
+    float: left;
+    width: 60px;
+    padding: 0px 5px;
+  }
+  .address-box .add-icon {
+    background: #27303b;
+    height: 50px;
+    line-height: 50px;
+    width: 75px;
+    margin-right: 20px;
+    text-align: center;
+  }
+  .add-icon img{
+    width: 100%;
+  }
+  .address-box .add-icon img {
+    max-width: 20px;
+  }
+  .add-content{
+    padding-left: 70px;
+  }
+  .add-content h5 {
+    font-size: 17px;
+    color: #ffffff;
+    padding: 0;
+    font-weight: 500;
+    margin-bottom: 10px;
+  }
+  .add-content p {
+    font-size: 13px;
+    color: #999999;
+    font-weight: 300;
+  }
+  .add-content p a{
+    font-size: 14px;
+    color: #999999;
+    font-weight: 300;
+    word-wrap: break-word;
+  }
+  .add-content p a:hover{
+    color: #ffb32d;
+  }

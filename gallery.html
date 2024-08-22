@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="./js/include.js" defer></script>
+  <script src="./js/expand.js" defer></script>
+  <script src="./js/script.js" defer></script>
+  <script src="./js/logoAnimation.js" defer></script>
+  <link rel="stylesheet" href="./css/navbar.css" />
+  <link rel="stylesheet" href="./css/gallery.css" />
+  <link rel="stylesheet" href="./css/footer.css" />
+  <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+    rel="stylesheet"
+  />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <title>Gallery</title>
+  <style>
+    /* Lightbox Styles */
+    .lightbox {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.8);
+  /* Centering styles */
+  justify-content: center;
+  align-items: center;
+}
+
+.lightbox-image {
+  max-width: 100%;
+  max-height: 100%;
+  /* Centering styles */
+  margin: auto;
+}
+
+    .close {
+      position: absolute;
+      top: 10px;
+      right: 25px;
+      color: #fff;
+      font-size: 35px;
+      font-weight: bold;
+    }
+
+    .close:hover,
+    .close:focus {
+      color: #bbb;
+      text-decoration: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body style="margin: 0px; padding: 0px; background-image: url(images/c.jpg); position: relative; background-position: center; background-size: cover; background-repeat: no-repeat; background-attachment: fixed;">
+  <header>
+    <div class="header-content" style = "background-color: #07071d;">
+      <canvas id="logoparticleeffect" class="logo-canvas"></canvas>
+      <!-- <img src="./images/logo(1).png" alt="Xertz Studios Logo" class="logo"> -->
+      <!--<h1 class="title">Xertz Studios</h1>-->
+      <nav class="navbar-large">
+        <ul class="nav-links">
+          <li><a href="home.html" class="link">Home</a></li>
+           <li><a href="about.html" class="link"> About Us</a></li>
+           <!-- <li><a href="careers.html" class="link"> Careers</a></li> -->
+          <li><a href="project.html" class="link"> Projects</a></li>
+          <li><a href="gallery.html" class="link"> Gallery</a></li>
+          <li><a href="faq.html" class="link"> FAQ</a></li>    
+          <li><a href="contact.html" class="link"></i> Contact</a></li>
+           
+        </ul>
+      </nav>
+    </div>
+    <span id="error-message" class="error">
+      <!-- <button type="button" class="cancel-button">
+          <i class="ri-close-line"></i> Cancel
+      </button> -->
+    </span>
+    <div class="header-content-mobile">
+      <div class="content-row">
+        <h1 class="title-mobile">Xertz Studios</h1>
+        <div class="hamburger" id="hamburger-menu">
+          <i class="ri-menu-line icon"></i>
+        </div>
+      </div>
+      <nav class="navbar-small" id="navbar-small">
+        <ul class="nav-links-mobile">
+          <li><a href="home.html" class="link-mobile"> Home</a></li>
+          <li><a href="about.html" class="link-mobile"> About</a></li>
+          <!-- <li><a href="careers.html" class="link-mobile"> Careers</a></li> -->
+          <li><a href="project.html" class="link-mobile"> Projects</a></li>
+          <li><a href="gallery.html" class="link-mobile"> Gallery</a></li>
+         
+          
+          <li><a href="faq.html" class="link-mobile"> FAQ</a></li>
+          <li><a href="contact.html" class="link-mobile"> Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  
+  <div class="gallery-container">
+    <div class = "gallery-div-row">
+      <div class = "gallery-col">
+        <p class = "gallery-title">Our Gallery</p>
+        <p class = "gallery-para">Explore the vibrant world of Xertz Studios through our gallery. Here, we showcase a diverse collection of images that capture the essence of our innovative workspace, dynamic projects, and the engaging environment we foster. our gallery provides a glimpse into the heart of our company. Dive into the visual journey and discover how we blend creativity, technology, and community to drive excellence.</p>
+      </div>
+      <img src="./images/257175-P4N6KB-87.jpg" class = "gallery-img" alt="">
+    </div>
+    <div class="card">
+      <img src="./images/tech.jpeg" alt="" class = "card-img">
+      <div class="advanced">
+        <p>Advanced</p>
+      </div>
+      <div class="content">
+        <h1>Technology</h1>
+        <p class="hiddentext">We offer various technologies, ensuring you will learn many interesting things.</p>
+      </div>
+    </div>
+    <div class="card">
+      <img src="./images/office1.jpeg" alt=""  class = "card-img">
+      <div class="content">
+        <div class="ample-space">
+          <p>Ample Space</p>
+        </div>
+        <h1>Office</h1>
+        <p class="hiddentext">We have big house and separate desk for each employee</p>
+      </div>
+    </div>
+    <div class="card">
+      <img src="./images/swimmingpool.jpg" alt=""  class = "card-img">
+      <div class="content">
+        <div class="refreshment">
+          <p>Refreshment</p>
+        </div>
+        <h1>Swimming pool</h1>
+        <p class="hiddentext">Enjoy swimming in our office pool during free time.</p>
+      </div>
+    </div>
+    <div class="card">
+      <img src="./images/ai.jpg" alt=""  class = "card-img">
+      <div class="innovation-support">
+        <p>Innovation Support</p>
+      </div>
+      <div class="content">
+        <h1>Virtual Environment</h1>
+        <p class="hiddentext">We support tech enthusiasts eager to learn and adapt.</p>
+      </div>
+    </div>
+    <div class="card">
+      <img src="./images/gym.jpg" alt=""  class = "card-img">
+      <div class="fitness">
+        <p>Fitness</p>
+      </div>
+      <div class="content">
+        <h1>Gym</h1>
+        <p class="hiddentext">We have a gym section for fitness enthusiasts.</p>
+      </div>
+    </div>
+    <div class="card">
+      <img src="./images/games.jpg" alt=""  class = "card-img">
+      <div class="content">
+        <div class="supportive-culture">
+          <p>Refreshment</p>
+        </div>
+        <h1>Games Hall</h1>
+        <p class="hiddentext">We have many different games like handfootball, Table tennis, Carrom, Chess</p>
+      </div>
+    </div>
+    <div class="card">
+      <img src="./images/enviroment.jpg" alt=""  class = "card-img">
+      <div class="content">
+        <div class="supportive-culture">
+          <p>Supportive Culture</p>
+        </div>
+        <h1>Environment</h1>
+        <p class="hiddentext">We foster a supportive environment for mutual growth.</p>
+      </div>
+    </div>
+    <div class="card">
+      <img src="./images/vibes.jpg" alt=""  class = "card-img">
+      <div class="refreshment">
+        <p>Refreshment</p>
+      </div>
+      <div class="content">
+        <h1>This is Vibes</h1>
+        <p class="hiddentext">Embark on thrilling adventures and capture epic moments with our cameras.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Lightbox Container -->
+  <div id="lightbox" class="lightbox">
+    <span class="close">&times;</span>
+    <img class="lightbox-image" src="" alt="" />
+  </div>
+
+  <footer class="footer-main fixed" style = "background-color: #07071d;">
+    <div class="container">
+      <div class="row address-main">
+        <div class="col-lg-4 col-sm-12 col-xs-12">
+          <div class="address-box clearfix">
+            <div class="add-icon">
+              <img src="./images/footer/footer-icon-1.jpg" alt="" />
+            </div>
+            <div class="add-content">
+              <h5 style="color:#fff">Address</h5>
+              <p style="color:#fff"> Xertz Studio, Srinagar Kmr, India </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-sm-12 col-xs-12">
+          <div class="address-box clearfix">
+            <div class="add-icon">
+              <img src="./images/footer/footer-icon-2.jpg" alt="" />
+            </div>
+            <div class="add-content">
+              <h5 style="color:#fff">Phone</h5>
+              <p style="color:#fff"> +(91) 9080908451 <br /> +(91) 985214756 </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-sm-12 col-xs-12">
+          <div class="address-box clearfix">
+            <div class="add-icon">
+              <img src="./images/footer/footer-icon-3.jpg" alt="" />
+            </div>
+            <div class="add-content">
+              <h5 style="color:#fff">Email</h5>
+              <p style="color:#fff"> <a href="mailto:Xertz@abc.com" style="text-decoration:none">Xertz@abc.com</a> </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Copyright Footer -->
+    <footer class=" text-center text-white">
+      <!-- Grid container -->
+      <div class="container p-4 pb-0">
+        <!-- Section: Social media -->
+        <section class="mb-4">
+          <!-- Facebook -->
+          <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fa fa-facebook-f"></i></a>
+
+          <!-- Twitter -->
+          <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fa fa-twitter"></i></a>
+
+          <!-- Google -->
+          <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fa fa-google"></i></a>
+
+          <!-- Instagram -->
+          <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fa fa-instagram"></i></a>
+        </section>
+        <!-- Section: Social media -->
+      </div>
+      <!-- Grid container -->
+
+      <!-- Copyright -->
+      <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+        Xertz Studios © 2024 All Rights Reserved.
+      </div>
+      <!-- Copyright -->
+    </footer>
+  </footer>
+</body>
+</html>

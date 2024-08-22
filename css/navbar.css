@@ -1,0 +1,216 @@
+
+.header-content {
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 2px solid #fff;
+  }
+  
+  .logo-canvas {
+    width: 200px; /* Adjust the width as needed */
+    height: 80px; /* Adjust the height as needed */
+    display: block;
+    margin: 10px;
+  }
+  
+  .header-content-mobile {
+    display: none;
+    align-items: center;
+    justify-content: space-between;
+    background: #07071d;
+  }
+
+ 
+  
+  .fade-in {
+    opacity: 0;
+    animation: fadeInAnimation 1.5s forwards; /* Adjust the duration as needed */
+  }
+  
+  @keyframes fadeInAnimation {
+    to {
+      opacity: 1;
+    }
+  }
+  
+  .logo {
+    height: auto;
+    background-color: white;
+    max-height: 60px; 
+    width: 200px;  
+    padding: 2px;
+    margin: 10px;
+  }
+  
+  
+
+  
+  .navbar-small {
+    display: none;
+  }
+  
+  .title{
+    color: white;
+    margin: 10px;
+  }
+  
+  .icon{
+    color: white;
+  }
+  
+  .title-mobile{
+    color: white;
+    margin: 10px;
+  }
+  
+  .nav-links {
+    
+    list-style: none;
+    padding: 5px;
+    margin: 5px;
+    display: flex;
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    display: flex;
+    align-items: center;
+  }
+
+  
+  .nav-links a {
+    color: #fff;
+    text-decoration: none;
+    padding: 2px;
+    position: relative;
+    display: inline-block;
+    transition: color 0.3s ease, background-color 0.3s ease;
+  }
+
+  .nav-links a:hover {
+    color: #fff; /* Text color on hover */
+    background-color: #282e34; /* Background color on hover */
+  }
+  .nav-links a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #c01919;
+    bottom: 0;
+    left: 0;
+    transition: width 0.3s ease;
+  }
+
+  
+  .nav-links a:hover::after {
+    width: 100%;
+  }
+  
+  .icon {
+    margin-right: 2px;
+  }
+  
+  .link {
+    margin: 5px 10px;
+    text-decoration: none;
+    color: white;
+  }
+  
+  
+  .hamburger{
+    color: white;
+    display: none;
+    margin: 10px;
+    cursor: pointer;
+  }
+  
+  .hamburger i {
+    font-size: 2rem;
+    color: #fff;
+  }
+  @media (max-width: 960px) {
+    .link-mobile {
+      display: flex;
+      margin: 7px;
+  
+      color: white;
+  
+    }
+  
+    .navbar-small {
+        /* Initially hidden */
+        max-height: 0;
+        overflow: hidden;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s ease, max-height 0.3s ease;
+        transition: all 0.3s ease-in-out;
+    }
+  
+    .navbar-small.show {
+        /* Visible state */
+        max-height: 500px; /* Adjust as needed */
+        opacity: 1;
+        visibility: visible;
+        display: block;
+    }
+  
+    .nav-links-mobile {
+      display: flex;
+      flex-direction: column;
+      list-style-type: none;
+      text-decoration: none;
+      z-index: 9999;
+    }
+  
+    .hamburger{
+        display: flex;
+    }
+  
+    .content-row {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        text-align: center;
+        justify-content: space-between;
+        width: 100%;
+    }
+  
+    .navbar-small {
+      display: flex;
+    }
+  
+    .navbar-large {
+      display: none;
+    }
+  
+    .header-content {
+      display: none;
+    }
+  
+    .header-content-mobile {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+  
+  @media (min-width: 960px) {
+    .navbar-large {
+      display: flex;
+    }
+  
+    .navbar-small {
+      display: none;
+    }
+  
+    .header-content {
+      display: flex;
+    }
+  
+    .header-content-mobile {
+      display: none;
+    }
+  }
+  
+  
