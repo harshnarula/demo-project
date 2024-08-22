@@ -16,7 +16,8 @@ body {
   
   .faq-img-mobile {
     display: none;
-    max-width: 100%;
+    max-width: 90%;
+    max-height: 90%;
     width: auto;
     height: auto;
     position: absolute;
