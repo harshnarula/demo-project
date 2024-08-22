@@ -26,11 +26,11 @@ window.onload = function() {
 
     function initCanvas() {
         ctx.clearRect(0, 0, canvas.width, canvas.height); 
-        ctx.font = `80px 'Orbitron'`;
+        var fontSize = Math.max(20, Math.min(canvas.width * 0.1, 80)); // Example range: min 20px, max 80px
+        ctx.font = `${fontSize}px 'Orbitron'`;
         ctx.fillStyle = "#cccccc";
         ctx.textAlign = "center";
         ctx.textBaseline = "middle";
-
         ctx.fillText(keyword, canvas.width / 2, canvas.height / 2 - 50);
         ctx.fillText(keyword1, canvas.width / 2, canvas.height / 2 + 50);
 

@@ -26,7 +26,7 @@ window.onload = function() {
 
     function initCanvas() {
         ctx.clearRect(0, 0, canvas.width, canvas.height); 
-        ctx.font = `80px 'Orbitron'`;
+        ctx.font = `5vw 'Orbitron'`; // Adjust font size based on viewport width
         ctx.fillStyle = "#cccccc";
         ctx.textAlign = "center";
         ctx.textBaseline = "middle";
@@ -113,8 +113,8 @@ window.onload = function() {
 
         // Redirect to home.html after a brief delay
         setTimeout(function() {
-            window.location.href = 'index.html';
-        }, 3200); // Adjust delay as needed
+            window.location.href = 'home.html';
+        }, 3200); 
     };
 
     resizeCanvas(); 
