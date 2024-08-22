@@ -18,7 +18,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
-<body class = "fade-in">
+<body>
   <!-- Navbar -->
   <header>
     <div class="header-content" style = "background-color: #07071d;">
@@ -217,9 +217,22 @@
     </footer>
     <!-- Include external JS file -->
     <script>
-      document.addEventListener("DOMContentLoaded", function() {
-        document.body.classList.add('fade-in');
+     document.addEventListener("DOMContentLoaded", function() {
+        // Get the current count from sessionStorage
+        let visitCount = sessionStorage.getItem('fadeInCount') || 0;
+
+        // Convert the count to an integer and increment it
+        visitCount = parseInt(visitCount) + 1;
+
+        // Store the updated count back in sessionStorage
+        sessionStorage.setItem('fadeInCount', visitCount);
+
+        // If the count is 1, add the fade-in class
+        if (visitCount === 1) {
+          document.body.classList.add('fade-in');
+        }
       });
+
     </script>
     <script src="functions.js" defer></script>
   </body>
