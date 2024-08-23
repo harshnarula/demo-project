@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src = "./js/careerform.js"></script>
+    <link rel="stylesheet" href="./css/careerform.css" />
+    <title>Careerform</title>
+  </head>
+  <body style = "margin: 0px; padding: 0px;">
+      <div class = "container-careerform">
+        <div class="main-div" id="careerform">
+          <section class="section-div">
+            <h2 class="form-title">Apply Here</h2>
+            <div class="form-div">
+              <form id="career-form">
+                <div class="row-div">
+                  <label class="form-label" for="name">Name:</label>
+                  <input class="form-input" type="text" id="name" name="name" placeholder = "Enter your name" />
+                </div>
+                <div class="row-div">
+                  <label class="form-label" for="email">Email:</label>
+                  <input class="form-input" type="text" id="email" name="email" placeholder = "Enter your email" />
+                </div>
+                <div class="row-div">
+                  <label class="form-label" for="mobileNo">Phone No:</label>
+                  <input class="form-input" type="tel" id="mobileNo" name="mobileNo" placeholder = "Enter your No."></input>
+                </div>
+                <div class="row-div">
+                    <label class="form-label" for="selectPosition">Select Position:</label>
+                    <div class="checks-div">
+                        <div class = "row-checks-div">
+                            <input type="checkbox" id="web-developer" class = "check-input" name="position" value="web-developer">
+                            <label for="web-developer" class = "check-label">Web Developer</label><br>
+                        </div>
+                        <div class = "row-checks-div">
+                            <input type="checkbox" class = "check-input" id="android-developer" name="position" value="android-developer">
+                            <label for="android-developer" class = "check-label">Android Developer</label><br>
+                        </div>
+                        <div class = "row-checks-div">
+                            <input type="checkbox" class = "check-input" id="software-engineer" name="position" value="software-engineer">
+                            <label for="software-engineer" class = "check-label">Software Engineer</label><br>
+                        </div>
+                        
+                        
+                        
+                    </div>
+                </div>
+                <div class="row-div">
+                    <label class="form-label" for="resume">Resume:</label>
+                    <input class="form-input" type="file" id="resume" name="resume" />
+                    <label class="file-label" for="fileLabel">Upload Resume</label>
+                  </div>
+                  <div class="row-div">
+                    <label class="form-label" for="statement">Why should we hire you?</label>
+                    <textarea class="form-textarea" type="text" id="email" name="email" placeholder = "Enter your email"></textarea>
+                  </div>
+                <div class = "btn-div">
+                    <button class="form-button" type="submit">Submit</button>
+                </div>
+                <span id="error-message" class="error"></span>
+              </form>
+            </div>
+          </section>
+        </div>
+    </div>
+  </body>
+</html>
