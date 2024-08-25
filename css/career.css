@@ -488,6 +488,13 @@ body{
     .benefits-perks-container{
         flex-direction: column;
     }
+
+    .job-post-qualification-badge-div{
+        flex-direction: column;
+    }
+    .job-post-qualification-badge-subdiv{
+        margin: 5px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -513,5 +520,12 @@ body{
     }
     .benefits-perks-container{
         flex-direction: column;
+    }
+
+    .job-post-qualification-badge-div{
+        flex-direction: column;
+    }
+    .job-post-qualification-badge-subdiv{
+        margin: 5px;
     }
 }
