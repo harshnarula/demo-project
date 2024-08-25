@@ -26,6 +26,8 @@
     position: relative;
     z-index: 1; /* Ensures the main-div is above the image */
     animation: fadeIn 2s ease-in-out;
+    border-radius: 10px;
+    padding: 10px;
   }
 
   .section-div {
@@ -37,7 +39,7 @@
 
 .form-title {
     text-align: center;
-    color: #18bbb3cf;
+    color: white;
     margin: 20px;
 }
 
@@ -48,12 +50,22 @@ input[type="file"]{
 .file-label{
     display: inline-block;
     text-align: center;
-    color: white;
-    background-color: aqua;
+    color: #416392;
+    background-color: white;
     border-radius: 3px;
     padding: 5px;
     margin-bottom: 10px;
     cursor: pointer;
+    transition: 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.file-name{
+    color: white;
+}
+
+.file-label:hover{
+    color: white;
+    background-color: #416392;
 }
 
 
@@ -64,9 +76,14 @@ input[type="file"]{
     align-items: flex-start;
 }
 
+
 .form-label {
     margin-bottom: 0.5rem;
-    color: #18bbb3cf;
+    color: white;
+}
+
+.check-label{
+    color: white;
 }
 
 
@@ -77,8 +94,8 @@ input[type="file"]{
     align-items: center;
     margin-bottom: 1rem;
     padding: 0.5rem;
-    border: 1px solid #18bbb3cf;
-    color: #18bbb3cf;
+    border: 1px solid #416392;
+    color: #416392;
     border-radius: 8px;
     text-indent: 2px;
     width: 400px;
@@ -88,7 +105,7 @@ input[type="file"]{
 
 .form-input::placeholder,
 .form-textarea::placeholder {
-    color: #18bbb3cf;
+    color: #416392;
 }
 
 .form-input.active::placeholder,
@@ -98,16 +115,16 @@ input[type="file"]{
 
 .form-input.active,
 .form-textarea.active {
-    background-color: #18bbb3cf;
+    background-color: #416392;
     color: #fff;
     border-color: #fff;
 }
 
 .form-button {
     padding: 0.5rem;
-    border-color: #18bbb3cf;
-    color: #18bbb3cf;
-    border: 1px solid #18bbb3cf;
+    border-color: #416392;
+    color: #416392;
+    border: 1px solid #416392;
     cursor: pointer;
     border-radius: 8px;
     margin-top: 1rem;
@@ -140,18 +157,18 @@ input[type="file"]{
 }
 
 .form-button:hover {
-    background: #18bbb3cf;
+    background: #416392;
     color: #fff;
 }
 
 .error {
     width: 300px;
     height: 40px;
-    background-color: #18bbb3;
+    background-color: #416392;
     color: white;
     display: none;
-    justify-content: center;
-    align-items: center;
+    text-align: center;
+    padding: 10px;
     position: fixed;
     top: 20px;
     right: 0px;
@@ -177,8 +194,8 @@ input[type="file"]{
     .form-textarea {
         margin-bottom: 1rem;
         padding: 0.5rem;
-        border: 1px solid #18bbb3cf;
-        color: #18bbb3cf;
+        border: 1px solid #416392;
+        color: #416392;
         border-radius: 8px;
         text-indent: 2px;
         width: 180px;

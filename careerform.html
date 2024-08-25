@@ -7,13 +7,14 @@
     <link rel="stylesheet" href="./css/careerform.css" />
     <title>Careerform</title>
   </head>
-  <body style = "margin: 0px; padding: 0px;">
+  <body style = "margin: 0px; padding: 0px;background-image: url(images/c.jpg); position: relative; background-position: center; background-size: cover; background-repeat: no-repeat; background-attachment: fixed;">
       <div class = "container-careerform">
-        <div class="main-div" id="careerform">
+        <span id="error-message" class="error"></span>
+        <div class="main-div" id="careerform" style = "background-color: rgba(255, 255, 255, 0.2); backdrop-filter: blur(10px);">
           <section class="section-div">
             <h2 class="form-title">Apply Here</h2>
             <div class="form-div">
-              <form id="career-form">
+              <form id="career-form" onsubmit="FormValidation(event)">
                 <div class="row-div">
                   <label class="form-label" for="name">Name:</label>
                   <input class="form-input" type="text" id="name" name="name" placeholder = "Enter your name" />
@@ -48,21 +49,25 @@
                 </div>
                 <div class="row-div">
                     <label class="form-label" for="resume">Resume:</label>
-                    <input class="form-input" type="file" id="resume" name="resume" />
-                    <label class="file-label" for="fileLabel">Upload Resume</label>
-                  </div>
-                  <div class="row-div">
-                    <label class="form-label" for="statement">Why should we hire you?</label>
-                    <textarea class="form-textarea" type="text" id="email" name="email" placeholder = "Enter your email"></textarea>
+                    <input class="file-input" type="file" id="resume" name="resume" />
+                    <label class="file-label" for="resume">Upload Resume</label>
+                    <span id="file-name" class="file-name"></span>
+
                   </div>
                 <div class = "btn-div">
                     <button class="form-button" type="submit">Submit</button>
                 </div>
-                <span id="error-message" class="error"></span>
+               
               </form>
             </div>
           </section>
         </div>
     </div>
+    <script>
+      document.getElementById('resume').addEventListener('change', function(event) {
+        const fileName = event.target.files[0] ? event.target.files[0].name : 'No file chosen';
+        document.getElementById('file-name').textContent = fileName;
+      });
+    </script>
   </body>
 </html>
